@@ -3,7 +3,8 @@ import { Inter, Nunito } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-import Modal from './components/modals/Modal'
+import RegisterModal from './components/modals/RegisterModal'
+
 
 const inter = Inter({ subsets: ['latin'] })
 const nunito = Nunito({ subsets: ['latin'] })
@@ -20,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={nunito.className} suppressHydrationWarning={true}>
         <ClientOnly>
-          <Modal actionLabel='submit' title='Hello'  isOpen/>
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
