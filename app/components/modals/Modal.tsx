@@ -96,7 +96,7 @@ const Modal: React.FC<ModalPrpos> = ({
                                 border-b-[1px]
 
                             ">
-                                <button onClick={handleClose} className="
+                                <button  onClick={handleClose} className="
                                     p-1
                                     border-0
                                     hover:opacity-70
@@ -120,6 +120,7 @@ const Modal: React.FC<ModalPrpos> = ({
                                     )}
                                     <Button disabled={disabled} label={actionLabel} onClick={handleSubmit} />
                                 </div>
+                                {footer}
                             </div>
                         </div>
                     </div>
