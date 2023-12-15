@@ -7,7 +7,7 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcrypt"
 
 
-export const authOPtion: AuthOptions = {
+export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({
@@ -60,4 +60,4 @@ export const authOPtion: AuthOptions = {
     secret: process.env.NEXTAUTH_SECRET,
 }
 
-export default NextAuth(authOPtion)
+export default NextAuth(authOptions)
